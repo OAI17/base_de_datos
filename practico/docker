@@ -1,0 +1,25 @@
+## dockerhub para subir imagenes 
+
+#contenedor ya creado
+
+#listar contenedores activos 
+	docker ps 
+
+#prender un contenedor 
+	docker start <nombre-o-ID-del-contenedor>
+
+#apagar un contenedor 
+	docker stop <nombre-o-ID-del-contenedor>
+
+#reiniciar un contenedor 
+	docker restart <nombre-o-ID-del-contenedor>
+
+#eliminar un contenedor
+	docker rm <nombre-o-ID-del-contenedor>
+
+#entrar al contenedor 
+	docker exec -it <contenier id> /bin/bash
+
+#saber cuanto computo consume
+	docker stats	
+
