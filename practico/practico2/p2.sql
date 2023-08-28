@@ -1,8 +1,3 @@
--- Ejercicio 1
-create DATABASE world;
-use world; 
-
--- Ejercicio 2
 CREATE TABLE country (
     Code varchar(100) PRIMARY KEY NOT NULL,
     Name varchar(100),
@@ -36,16 +31,20 @@ CREATE TABLE countrylanguage (
     PRIMARY KEY (CountryCode, LanguageCountry),
     FOREIGN KEY (CountryCode) REFERENCES country(Code));
 
--- Ejercicio 3 -> insertar datos 
-
--- Ejercicio 4 
+    
 CREATE TABLE Continent (
     Name varchar(100) PRIMARY KEY,
     Area int,
     PercentTotalMass numeric(5,2),
     MostPopulousCity varchar(100));
 
--- Ejercicio 5  
+
+-- Consultas
+-- select * from city where CountryCode = 'USA';
+-- select MAX(Population) AS max_pop FROM city;
+-- select Name from city order by Population desc limit 1;
+-- select code from country group by code
+
 INSERT INTO `Continent` VALUES ('AFRICA', 30370000, 20.4, 'Cairo, Egypt');
 INSERT INTO `Continent` VALUES ('ANTARCTICA', 14000000, 9.2, 'McMurdo Station');
 INSERT INTO `Continent` VALUES ('ASIA', 45579000, 29.5, 'Mumbai, India');
@@ -53,11 +52,9 @@ INSERT INTO `Continent` VALUES ('EUROPE', 10180000, 6.8, 'Instanbul, Turquia');
 INSERT INTO `Continent` VALUES ('NORTH AMERICA', 24709000, 16.5, 'Ciudad de Mexico, Mexico');
 INSERT INTO `Continent` VALUES ('OCEANIA', 8600000, 5.9, 'Sidney, Australia');
 INSERT INTO `Continent` VALUES ('SOUTH AMERICA', 1784000, 12.0, 'Sao Paulo, Brazil');
-
--- -- Ejercicio 6 -> consultas
 ALTER TABLE country ADD FOREIGN KEY (Continent) REFERENCES Continent(Name);
 
--- Consultas 
+-- Consultas
 SELECT Name, Region FROM country ORDER BY Name;
 SELECT Name, Population FROM country ORDER BY Population DESC LIMIT 10;
 SELECT Name, Region, SurfaceArea, GovernmentForm ORDER BY SurfaceArea ASC LIMIT 10;
