@@ -1,0 +1,16 @@
+SELECT * FROM (columna/s) 
+INNER JOIN (la tabla que quiero unir) 
+ON (columna en comun tabla1) = (columna en comun tabla2) 
+INNER JOIN ..... (puedo poner las que quiera)
+
+ejemplo : 
+SELECT * FROM ventas 
+INNER JOIN clientes 
+ON ventas.Cliente_idCliente = clientes.idClientes
+
+
+
+Los alias sirven para no escribir tanto, mas usado en las condiciones. Se define despues del nombre de la tabla.
+
+
+Si cambio INNER JOIN por LEFT OUTER JOIN la deferencia es que ??
