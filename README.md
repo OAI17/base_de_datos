@@ -16,3 +16,5 @@
 ##### Full join 
 ![fulljoin](src/full_join.png)
 
+
+DROP DATABASE IF EXISTS (database name)
