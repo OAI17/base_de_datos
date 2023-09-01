@@ -1,3 +1,18 @@
-### Base de datos
+## Base de datos
+###### Tomas Marmay ~ famaf 2023
 
-> [guia de instalacion](https://docs.google.com/document/d/1Z-LuSE--r2WMDr-2NFE07f5f_2b4xNwHoV5BMIE0qgQ/edit?usp=sharing)
+##### Query sintax
+![allcases](src/join.jpeg)
+
+##### Inner join :
+![innerjoin](src/inner_join.png) 
+
+##### Left join:
+![leftjoin](src/left_join.png)
+
+##### Right join:
+![rightjoin](src/right_join.png)
+
+##### Full join 
+![fulljoin](src/full_join.png)
+
