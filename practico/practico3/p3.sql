@@ -75,5 +75,15 @@ FROM city
 LEFT JOIN country ON city.CountryCode = country.Code
 WHERE country.Name = 'Argentina');
 
+/*Practica*/
 -- No devuelve lo mismo porque le reste al conjunto mas grande el conjunto menor y no quedo un set vacio
--- TIENE QUE VER CON LOS NULLS 
+/*Teorica*/
+/*
+La diferencia principal entre inner join y left join radica en cómo manejan las filas que no tienen coincidencias 
+en la tabla de la izquierda con respecto a la tabla de la derecha en la consulta:
+     inner join :   - Devuelve solo las filas que tienen coincidencias en ambas tablas según la condición especificada en la cláusula ON.
+                    - Las filas que no tienen coincidencias en ambas tablas se excluyen del resultado final.
+
+     left join :    - Devuelve todas las filas de la tabla de la izquierda (tabla principal) y las filas de la tabla de la derecha (tabla secundaria) que cumplen con la condición especificada en la cláusula ON.
+                    - Si no hay coincidencias en la tabla de la derecha para una fila de la tabla de la izquierda, se incluirá en el resultado con valores nulos en las columnas de la tabla de la derecha.
+*/
