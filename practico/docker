@@ -1,3 +1,7 @@
+#obtener informacion del proceso que utilizar el puerto 3306
+sudo lsof -i :3306
+sudo netstat -tuln | grep 3306
+
 ## dockerhub para subir imagenes 
 
 #contenedor ya creado
@@ -23,3 +27,5 @@
 #saber cuanto computo consume
 	docker stats	
 
+#conectarse a mysql 
+mysql --host 172.17.0.2 -u root -p
