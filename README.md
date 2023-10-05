@@ -1,4 +1,4 @@
-v#### Tomas Marmay ~ famaf 2023
+#### Tomas Marmay ~ famaf 2023
 
 ##### Frecuent commands
 - `source file` : load *file* into current database from mysql  
