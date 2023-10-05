@@ -1,7 +1,16 @@
 ## Base de datos
-###### Tomas Marmay ~ famaf 2023
+#### Tomas Marmay ~ famaf 2023
 
-##### Query sintax
+##### Frecuent commands
+- `source file` : load *file* into current database from mysql  
+- `CREATE TABLE table_name;`
+- `DROP TABLE table_name;` 
+- ``
+- `SHOW DATABASES;`
+- `SHOW TABLES;`
+- `call procedure_name` : execute *prodecure_name* 
+
+##### Query syntax
 ![allcases](src/join.jpeg)
 
 ##### Inner join :
