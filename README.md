@@ -35,6 +35,7 @@
 - `UNION` : just the union of two sets
 - `INTERSECT` : just the intersect of two sets
 - `EXCEPT` : compare two result sets and retrieve rows that are present in the first set but not in the second (like subtraction)
+  
 ![setoperation](src/set_operation.png)
 
 *ALL is used for keep duplicates*
