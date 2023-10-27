@@ -1,3 +1,5 @@
+#SQL
+
 #obtener informacion del proceso que utilizar el puerto 3306
 sudo lsof -i :3306
 sudo netstat -tuln | grep 3306
@@ -29,3 +31,29 @@ sudo netstat -tuln | grep 3306
 
 #conectarse a mysql 
 mysql --host 172.17.0.2 -u root -p
+
+#MONGODB
+
+#Descargar la imagen del contenedor mongo
+    
+	docker pull mongo:5
+
+#Iniciar un contenedor de mongo
+
+	docker run --name mongo-labs -d mongo:5
+
+#Chequear que el contenedor esté en ejecución
+
+	docker ps
+
+#Instalar “Mongo shell”
+
+	sudo apt install mongodb-org-shell
+
+#Instalar “MongoDB tools” (mongodump, mongoimport, etc)
+
+	sudo apt install mongodb-org-tools
+
+#Conectar al servidor MongoDB con mongo shell
+	sudo docker exec -it mongo-labs mongo
+	mongo --host 172.17.0.2
