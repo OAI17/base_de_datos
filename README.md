@@ -1,5 +1,7 @@
 #### Tomas Marmay ~ famaf 2023
 
+#### SQL
+
 ##### Frecuent commands
 - `source file` : load *file* into current database from mysql  
 - `SHOW DATABASES;`
@@ -95,3 +97,46 @@ with *NEW* we can access the data of the new entry
 - Example 
   
 ![ejemplo](src/asignar_rol.png)
+
+#### MONGODB
+- Estructurado de una consulta
+```javascript
+db.table.find({query},{proyection}).sort().skip().limit()
+```
+- Dado una estructura como el primer codigo de abajo, de la siguiente forma se puede acceder al atributo rating de imdb:
+```javascript
+{"imdb" : {"rating" : 3}}
+```
+```javascript
+db.table.find({"imdb.rating" : 4})
+```
+
+- De esta forma podemos quedarnos con los resultados de *imdb.rating* que no son iguales a "" y que no tengan tipo *string*
+```javascript
+db.table.find({"imdb.rating": {
+  $ne: "",
+  $not: { $type: "string" }}
+})
+```
+- De esta forma veo que *Drama* y *Action* esten incluidos en *genres*
+```javascript
+{$all : ["Drama", "Action"]} 
+```
+- De la siguiente forma se puede hacer un or 
+```javascript
+	.find(
+	{
+		$or : [
+			{runtime : {$gte : 180}},
+			{rating : {$gt : 9}}
+		]
+	})
+```  
+- De esta forma se puede borrar filtrando por el año de una fecha en formato iso 8601
+```javascript
+.deleteMany(
+{
+    date: { $gte: ISODate("1980-01-01T00:00:00.000Z"), $lt: ISODate("1981-01-01T00:00:00.000Z") }
+}
+)
+```
