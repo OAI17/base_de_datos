@@ -145,3 +145,4 @@ CORREGIR
 mongoimport --host <host> --db <db name>  --collection <collection name> --file <file.json>
 mongoimport --host 172.17.0.2 --db restaurant  --collection restaurants --file restaurants.json
 mongorestore --host <host> --drop --gzip --db <db name> <dir name>
+
